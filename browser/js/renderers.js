@@ -161,6 +161,7 @@ function renderImageOrVideo (container, media) {
       showInViewer(dom(`<video crossOrigin="Anonymous" class="full-screen" controls src="${bestVideo.url}">`));
     });
     container.oncontextmenu = () => renderVideoContextMenu(bestVideo.url);
+    downloadFile(bestVideo.url);
   } else {
     container.appendChild(bestImgDom);
 
@@ -168,6 +169,7 @@ function renderImageOrVideo (container, media) {
       showInViewer(dom(`<img crossOrigin="Anonymous" class="full-screen" src="${bestImg.url}">`));
     });
     container.oncontextmenu = () => renderImageContextMenu(bestImg.url);
+    downloadFile(bestImg.url);
   }
   container.classList.add('ig-media');
 }
