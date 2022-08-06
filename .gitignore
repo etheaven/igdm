@@ -44,4 +44,6 @@ dist
 # Extras
 browser/index.html
 browser/login.html
+
 yarn.lock
+package-lock.json
